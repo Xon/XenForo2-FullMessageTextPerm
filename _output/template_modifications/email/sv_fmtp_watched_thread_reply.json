@@ -1,0 +1,9 @@
+{
+    "template": "watched_thread_reply",
+    "description": "",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "$xf.options.emailWatchedThreadIncludeMessage",
+    "replace": "$receiver.canReceiveFullEmailMessageContent('thread', {$post.Thread.node_id})"
+}

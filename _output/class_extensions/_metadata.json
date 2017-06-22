@@ -1,0 +1,11 @@
+{
+    "XF-Entity-User_SV-FullMessageTextPermission-XF-Entity-User.json": {
+        "hash": "10c45c9f0f9173db846de601e458a31a"
+    },
+    "XF-Service-Conversation-Notifier_SV-FullMessageTextPermission-XF-Service-Conversation-Notifier.json": {
+        "hash": "cd9967b99e06ac2f0a66609347fe8422"
+    },
+    "XF-Service-Post-Notifier_SV-FullMessageTextPermission-XF-Service-Post-Notifier.json": {
+        "hash": "9e8765498f6df2595c16dbd488273c7b"
+    }
+}
