@@ -3,21 +3,27 @@
 namespace SV\FullMessageTextPermission;
 
 use XF\AddOn\AbstractSetup;
+use XF\Db\Schema\Alter;
 
 class Setup extends AbstractSetup
 {
 	public function install(array $stepParams = [])
 	{
-		// TODO: Implement install() method.
+		$this->schemaManager()->alterTable('xf_user_option', function (Alter $table)
+		{
+			$table->addColumn('fmp_always_email_notify', 'boolean')->setDefault(0);
+		});
 	}
 
 	public function upgrade(array $stepParams = [])
 	{
-		// TODO: Implement upgrade() method.
 	}
 
 	public function uninstall(array $stepParams = [])
 	{
-		// TODO: Implement uninstall() method.
+		$this->schemaManager()->alterTable('xf_user_option', function (Alter $table)
+		{
+			$table->dropColumns('fmp_always_email_notify');
+		});
 	}
 }

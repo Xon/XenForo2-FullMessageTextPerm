@@ -2,6 +2,9 @@
     "XF-Entity-User_SV-FullMessageTextPermission-XF-Entity-User.json": {
         "hash": "10c45c9f0f9173db846de601e458a31a"
     },
+    "XF-Pub-Controller-Account_SV-FullMessageTextPermission-XF-Pub-Controller-Account.json": {
+        "hash": "74ade605ca9e9c8a3480b5022c98f9f9"
+    },
     "XF-Service-Conversation-Notifier_SV-FullMessageTextPermission-XF-Service-Conversation-Notifier.json": {
         "hash": "cd9967b99e06ac2f0a66609347fe8422"
     },

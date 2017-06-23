@@ -16,5 +16,8 @@
     },
     "email/sv_fmtp_watched_thread_reply.json": {
         "hash": "d39bcfa7875065972bd4f30bcc6f4a2a"
+    },
+    "public/sv_fullmessagetextperm_account_preferences.json": {
+        "hash": "7efde10ea0632f91c0c7df393043116b"
     }
 }

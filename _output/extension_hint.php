@@ -8,6 +8,11 @@ namespace SV\FullMessageTextPermission\XF\Entity
 	class XFCP_User extends \XF\Entity\User {}
 }
 
+namespace SV\FullMessageTextPermission\XF\Pub\Controller
+{
+	class XFCP_Account extends \XF\Pub\Controller\Account {}
+}
+
 namespace SV\FullMessageTextPermission\XF\Service\Conversation
 {
 	class XFCP_Notifier extends \XF\Service\Conversation\Notifier {}

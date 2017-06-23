@@ -10,5 +10,11 @@
         "version_id": 2000070,
         "version_string": "2.0.0",
         "hash": "c0b19a8d15fc791323f7dd18c7769390"
+    },
+    "sv_fullmessagetextpermission_always_email_notify.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "bbde3aab0fe316a017703233745ab15c"
     }
 }
