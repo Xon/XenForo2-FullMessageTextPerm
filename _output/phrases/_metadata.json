@@ -11,6 +11,12 @@
         "version_string": "2.0.0",
         "hash": "5a37852b707940186cf2704fee3cfd77"
     },
+    "option.fmp_allowAlwaysEmailWatched.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "4a6db62ea639a4da55f36cdce0e78a2e"
+    },
     "option_explain.FMP_AlwaysSendWarning.txt": {
         "global_cache": false,
         "version_id": 2000070,
@@ -22,6 +28,12 @@
         "version_id": 2000070,
         "version_string": "2.0.0",
         "hash": "129b3385271b624fcd9d191c61be5966"
+    },
+    "option_explain.fmp_allowAlwaysEmailWatched.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "4e85bb917d278882392083e1255441fd"
     },
     "option_group.sv_fulltextmessagepermission.txt": {
         "global_cache": false,

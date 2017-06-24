@@ -4,5 +4,8 @@
     },
     "FMP_TextTrimLength.json": {
         "hash": "2cc5dde95c967c829131408cc1d97256"
+    },
+    "fmp_allowAlwaysEmailWatched.json": {
+        "hash": "95908c5b561cc35023d7056969d0b87a"
     }
 }
