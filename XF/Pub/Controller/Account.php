@@ -8,14 +8,17 @@ class Account extends XFCP_Account
 	{
 		$form = parent::preferencesSaveProcess($visitor);
 
-		$input = $this->filter([
-			'option' => [
-				'fmp_always_email_notify' => 'bool'
-			]
-		]);
+		if (\XF::options()->fmp_allowAlwaysEmailWatched)
+		{
+			$input = $this->filter([
+				'option' => [
+					'fmp_always_email_notify' => 'bool'
+				]
+			]);
 
-		$userOptions = $visitor->getRelationOrDefault('Option');
-		$form->setupEntityInput($userOptions, $input['option']);
+			$userOptions = $visitor->getRelationOrDefault('Option');
+			$form->setupEntityInput($userOptions, $input['option']);
+		}
 
 		return $form;
 	}

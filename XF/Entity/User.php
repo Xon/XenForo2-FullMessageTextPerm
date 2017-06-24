@@ -8,6 +8,7 @@ class User extends XFCP_User
 	{
 		switch ($type)
 		{
+			case 'forum':
 			case 'thread':
 			case 'post':
 				return $this->hasNodePermission($nodeId, 'emailIncludeMessage');

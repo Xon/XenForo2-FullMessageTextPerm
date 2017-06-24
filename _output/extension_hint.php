@@ -15,10 +15,16 @@ namespace SV\FullMessageTextPermission\XF\Pub\Controller
 
 namespace SV\FullMessageTextPermission\XF\Service\Conversation
 {
+	class XFCP_Creator extends \XF\Service\Conversation\Creator {}
 	class XFCP_Notifier extends \XF\Service\Conversation\Notifier {}
 }
 
 namespace SV\FullMessageTextPermission\XF\Service\Post
 {
 	class XFCP_Notifier extends \XF\Service\Post\Notifier {}
+}
+
+namespace SV\FullMessageTextPermission\XF\Service\User
+{
+	class XFCP_Warn extends \XF\Service\User\Warn {}
 }

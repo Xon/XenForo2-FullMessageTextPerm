@@ -1,9 +1,9 @@
 {
     "template": "watched_forum_thread",
     "description": "",
-    "execution_order": 10,
+    "execution_order": 0,
     "enabled": true,
     "action": "str_replace",
-    "find": "$xf.options.emailWatchedThreadIncludeMessage",
-    "replace": "$receiver.canReceiveFullEmailMessageContent('forum', {$post.Thread.node_id})"
+    "find": "<xf:if is=\"$xf.options.emailWatchedThreadIncludeMessage\">\n\t<blockquote>{{ bb_code($post.message, 'post', $post.User, [], 'emailHtml')|raw }}</blockquote>\n</xf:if>",
+    "replace": "<xf:if is=\"$receiver.canReceiveFullEmailMessageContent('forum')\">\n\t<blockquote>{{ bb_code($post.message, 'post', $post.User, [], 'emailHtml')|raw }}</blockquote>\n<xf:else />\n\t<blockquote>{{ snippet(bb_code($post.message, 'post', $post.User, [], 'emailHtml'), $xf.options.FMP_TextTrimLength)|raw }}</blockquote>\n</xf:if>"
 }

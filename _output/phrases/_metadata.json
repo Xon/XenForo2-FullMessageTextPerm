@@ -1,4 +1,40 @@
 {
+    "option.FMP_AlwaysSendWarning.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "0865e2d47e97c600d8dfb00e3a8c27b7"
+    },
+    "option.FMP_TextTrimLength.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "5a37852b707940186cf2704fee3cfd77"
+    },
+    "option_explain.FMP_AlwaysSendWarning.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "8892bc05c9acde27821f059cc6372e58"
+    },
+    "option_explain.FMP_TextTrimLength.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "129b3385271b624fcd9d191c61be5966"
+    },
+    "option_group.sv_fulltextmessagepermission.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "55d65380479009489e72bab3e13208ac"
+    },
+    "option_group_description.sv_fulltextmessagepermission.txt": {
+        "global_cache": false,
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "d41d8cd98f00b204e9800998ecf8427e"
+    },
     "permission.conversation_emailIncludeMessage.txt": {
         "global_cache": false,
         "version_id": 2000070,
