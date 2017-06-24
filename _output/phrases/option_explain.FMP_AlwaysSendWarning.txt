@@ -1,0 +1,1 @@
+If enabled, the first message of a warning conversation will be notified.

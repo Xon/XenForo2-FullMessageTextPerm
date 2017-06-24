@@ -1,0 +1,9 @@
+{
+    "template": "conversation_reply",
+    "description": "",
+    "execution_order": 0,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:if is=\"$xf.options.emailConversationIncludeMessage\">\n\t<blockquote>{{ bb_code($message.message, 'conversation_message', $message.User, [], 'emailHtml')|raw }}</blockquote>\n</xf:if>",
+    "replace": "<xf:if is=\"$receiver.canReceiveFullEmailMessageContent('conversation_reply', null, {$warningConversation})\">\n\t<blockquote>{{ bb_code($message.message, 'conversation_message', $message.User, [], 'emailHtml')|raw }}</blockquote>\n<xf:else />\n\t<blockquote>{{ snippet(bb_code($message.message, 'conversation_message', $message.User, [], 'emailHtml'), $xf.options.FMP_TextTrimLength)|raw }}</blockquote>\n</xf:if>"
+}

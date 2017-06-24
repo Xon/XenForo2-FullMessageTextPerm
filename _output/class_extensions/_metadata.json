@@ -1,0 +1,20 @@
+{
+    "XF-Entity-User_SV-FullMessageTextPermission-XF-Entity-User.json": {
+        "hash": "10c45c9f0f9173db846de601e458a31a"
+    },
+    "XF-Pub-Controller-Account_SV-FullMessageTextPermission-XF-Pub-Controller-Account.json": {
+        "hash": "74ade605ca9e9c8a3480b5022c98f9f9"
+    },
+    "XF-Service-Conversation-Creator_SV-FullMessageTextPermission-XF-Service-Conversation-Creator.json": {
+        "hash": "0a5b77b32188754385e8b08498f621fa"
+    },
+    "XF-Service-Conversation-Notifier_SV-FullMessageTextPermission-XF-Service-Conversation-Notifier.json": {
+        "hash": "cd9967b99e06ac2f0a66609347fe8422"
+    },
+    "XF-Service-Post-Notifier_SV-FullMessageTextPermission-XF-Service-Post-Notifier.json": {
+        "hash": "9e8765498f6df2595c16dbd488273c7b"
+    },
+    "XF-Service-User-Warn_SV-FullMessageTextPermission-XF-Service-User-Warn.json": {
+        "hash": "095c53921ea57aadd51796140e3267c9"
+    }
+}

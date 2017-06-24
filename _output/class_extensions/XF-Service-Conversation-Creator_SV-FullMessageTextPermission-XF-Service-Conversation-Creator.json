@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Service\\Conversation\\Creator",
+    "to_class": "SV\\FullMessageTextPermission\\XF\\Service\\Conversation\\Creator",
+    "execute_order": 10,
+    "active": true
+}

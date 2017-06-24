@@ -1,0 +1,1 @@
+If enabled, users' can modify the option that controls whether they always receive watch notifications.

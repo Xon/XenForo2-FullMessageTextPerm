@@ -1,0 +1,1 @@
+Enter the amount of text that will be displayed to users without permission to view the full message.
