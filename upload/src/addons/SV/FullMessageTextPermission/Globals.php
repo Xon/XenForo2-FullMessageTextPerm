@@ -15,7 +15,7 @@ namespace SV\ContentRatings;
 class Globals
 {
     /** @var bool  */
-    public static $forceNotify = null;
+    public static $forceWarningNotification = null;
 
     /**
      * Private constructor, use statically.

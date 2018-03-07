@@ -20,7 +20,7 @@ class Warn extends XFCP_Warn
 
         if (\XF::options()->FMP_AlwaysSendWarning)
         {
-            $creator->forceNotification(true);
+            $creator->forceWarningNotification(true);
         }
 
         return $creator;

@@ -11,34 +11,46 @@ namespace SV\FullMessageTextPermission\XF\Entity;
 
 class User extends XFCP_User
 {
+    protected $canReceiveFullEmailMessageContent = true;
+
     /**
-     * @param string $type
-     * @param int    $nodeId
-     * @param bool   $warningConversation
-     * @return bool
+     * @param string   $type
+     * @param int|null $nodeId
+     * @param bool     $warningConversation
      */
-    public function canReceiveFullEmailMessageContent(/** @noinspection PhpUnusedParameterInspection */
-        $type, $nodeId = null, $warningConversation = false)
+    public function configureFullEmailMessageContent($type, $nodeId = null, $warningConversation = false)
     {
         switch ($type)
         {
             case 'forum':
             case 'thread':
             case 'post':
-                return $this->hasNodePermission($nodeId, 'emailIncludeMessage');
+                $this->canReceiveFullEmailMessageContent = $this->hasNodePermission($nodeId, 'emailIncludeMessage');
                 break;
             case 'conversation_invite':
             case 'conversation_create':
             case 'conversation_reply':
                 if ($warningConversation)
                 {
-                    return true;
+                    $this->canReceiveFullEmailMessageContent = true;
                 }
-
-                return $this->hasPermission('conversation', 'emailIncludeMessage');
+                else
+                {
+                    $this->canReceiveFullEmailMessageContent = $this->hasPermission('conversation', 'emailIncludeMessage');
+                }
                 break;
             default:
                 throw new \LogicException("Invalid type {$type} passed to canReceiveFullEmailMessageContent method.");
         }
+    }
+
+    /**
+     * This function relies on user state to be setup before hand
+     *
+     * @return bool
+     */
+    public function canReceiveFullEmailMessageContent()
+    {
+        return $this->canReceiveFullEmailMessageContent;
     }
 }

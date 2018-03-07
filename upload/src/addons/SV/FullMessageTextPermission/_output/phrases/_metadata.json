@@ -33,13 +33,13 @@
         "global_cache": false,
         "version_id": 2000070,
         "version_string": "2.0.0",
-        "hash": "9dee2ebaea14a0d80ee0a733dc98143a"
+        "hash": "a01b46ef5337bf90db372f4a83f5b2c5"
     },
     "option_explain.FMP_TextTrimLengthFull.txt": {
         "global_cache": false,
-        "version_id": 1030000,
-        "version_string": "1.3.0",
-        "hash": "194a079a93eeb5a5dd53440de9416420"
+        "version_id": 2000070,
+        "version_string": "2.0.0",
+        "hash": "985c583bfe774caf4fb7a066a3db4d71"
     },
     "option_explain.fmp_allowAlwaysEmailWatched.txt": {
         "global_cache": false,
