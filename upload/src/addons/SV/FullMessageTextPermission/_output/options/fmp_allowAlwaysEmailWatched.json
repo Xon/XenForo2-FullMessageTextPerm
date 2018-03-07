@@ -7,6 +7,6 @@
     "validation_method": "",
     "default_value": "0",
     "relations": {
-        "sv_fulltextmessagepermission": 100
+        "sv_fulltextmessagepermission": 210
     }
 }

@@ -1,1 +1,1 @@
-Allow users to always receive email notifications
+Allow always emailing watched threads

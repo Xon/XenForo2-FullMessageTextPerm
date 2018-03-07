@@ -1,8 +1,11 @@
 {
     "conversation-emailIncludeMessage.json": {
-        "hash": "e11d7233f1cc6e0e0be5ef9dfbee1d69"
+        "hash": "318ce782ead3e0edda1c66f00413209b"
+    },
+    "forum-alwaysEmailWatchedThread.json": {
+        "hash": "23afc2a4036a4aa74eda6a735e2f2509"
     },
     "forum-emailIncludeMessage.json": {
-        "hash": "e61c5787d292393d2dec93457cfd6d44"
+        "hash": "446a9f8c8804638c5cac2db1a0d76fec"
     }
 }

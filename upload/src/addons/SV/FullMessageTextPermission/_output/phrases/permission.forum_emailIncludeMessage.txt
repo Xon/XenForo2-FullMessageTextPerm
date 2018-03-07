@@ -1,1 +1,1 @@
-Email full message
+Full message text notification emails (posts/threads)

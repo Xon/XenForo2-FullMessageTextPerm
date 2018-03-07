@@ -1,1 +1,1 @@
-If enabled, the first message of a warning conversation will be notified.
+Always send the full text of a conversation created when a member if warned.

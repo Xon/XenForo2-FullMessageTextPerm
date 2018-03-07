@@ -1,11 +1,14 @@
 {
     "FMP_AlwaysSendWarning.json": {
-        "hash": "3adb6e02a5aedac935715fab419af3a1"
+        "hash": "dce993996867db4330781f7ebb813371"
     },
     "FMP_TextTrimLength.json": {
-        "hash": "2cc5dde95c967c829131408cc1d97256"
+        "hash": "8279b59ad0582f6cfa320894a752b784"
+    },
+    "FMP_TextTrimLengthFull.json": {
+        "hash": "15baf4f3f1fb0717502fcb8146c20c13"
     },
     "fmp_allowAlwaysEmailWatched.json": {
-        "hash": "95908c5b561cc35023d7056969d0b87a"
+        "hash": "be758d5d554a38af0e7f9166d0925f98"
     }
 }

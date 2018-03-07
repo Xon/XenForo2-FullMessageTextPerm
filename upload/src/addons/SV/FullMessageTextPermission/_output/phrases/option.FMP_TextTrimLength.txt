@@ -1,1 +1,1 @@
-Text trim length
+Max partial message text length
