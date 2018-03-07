@@ -9,13 +9,14 @@
 
 namespace SV\FullMessageTextPermission\XF\Service\Conversation;
 
+use SV\ContentRatings\Globals;
 use XF\Entity\User;
 
 class Notifier extends XFCP_Notifier
 {
     protected function _canUserReceiveNotification(User $user, User $sender = null)
     {
-        if ($this->app->offsetExists('sv_fmtp_force_notif') && $this->app->sv_fmtp_force_notif)
+        if (Globals::$forceNotify)
         {
             return true;
         }

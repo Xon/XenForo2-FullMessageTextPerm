@@ -9,6 +9,8 @@
 
 namespace SV\FullMessageTextPermission\XF\Service\Conversation;
 
+use SV\ContentRatings\Globals;
+
 class Creator extends XFCP_Creator
 {
     protected $forceNotification = false;
@@ -32,7 +34,7 @@ class Creator extends XFCP_Creator
 
     public function sendNotifications()
     {
-        $this->app->sv_fmtp_force_notif = $this->forceNotification;
+        Globals::$forceNotify = $this->forceNotification;
 
         parent::sendNotifications();
     }
