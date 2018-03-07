@@ -13,13 +13,13 @@ use SV\ContentRatings\Globals;
 
 class Creator extends XFCP_Creator
 {
-    protected $forceNotification = false;
+    protected $forceNotification = null;
 
     public function forceNotification($forceNotification = null)
     {
         if ($forceNotification === null)
         {
-            $forceNotification = true;
+            return $this->forceNotification;
         }
 
         $this->forceNotification = $forceNotification;
@@ -27,15 +27,16 @@ class Creator extends XFCP_Creator
         return $this;
     }
 
-    public function getForceNotification()
-    {
-        return $this->forceNotification;
-    }
-
     public function sendNotifications()
     {
         Globals::$forceNotify = $this->forceNotification;
-
-        parent::sendNotifications();
+        try
+        {
+            parent::sendNotifications();
+        }
+        finally
+        {
+            Globals::$forceNotify = null;
+        }
     }
 }
