@@ -17,7 +17,7 @@ class Setup extends AbstractSetup
     public function install(array $stepParams = [])
     {
         $this->schemaManager()->alterTable('xf_user_option', function (Alter $table) {
-            $table->addColumn('fmp_always_email_notify', 'boolean')->setDefault(0);
+            $table->addColumn('fmp_always_email_notify', 'tinyint', 3)->setDefault(0);
         });
     }
 

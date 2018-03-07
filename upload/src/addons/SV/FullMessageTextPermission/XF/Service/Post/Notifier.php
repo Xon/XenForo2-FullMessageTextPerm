@@ -9,13 +9,15 @@
 
 namespace SV\FullMessageTextPermission\XF\Service\Post;
 
+use SV\FullMessageTextPermission\XF\Entity\UserOption;
+
 class Notifier extends XFCP_Notifier
 {
     protected function canUserReceiveWatchNotification(\XF\Entity\User $user, $userReadDate)
     {
         $canReceive = parent::canUserReceiveWatchNotification($user, $userReadDate);
 
-        if (!$canReceive)
+        if (!$canReceive && \XF::options()->fmp_allowAlwaysEmailWatched)
         {
             $post = $this->post;
 
@@ -24,7 +26,9 @@ class Notifier extends XFCP_Notifier
                 return false;
             }
 
-            $canReceive = $user->Option->fmp_always_email_notify;
+            /** @var UserOption $option */
+            $option = $user->Option;
+            $canReceive = $option->fmp_always_email_notify;
         }
 
         return $canReceive;

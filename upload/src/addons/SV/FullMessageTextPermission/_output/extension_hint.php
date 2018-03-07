@@ -6,6 +6,7 @@
 namespace SV\FullMessageTextPermission\XF\Entity
 {
 	class XFCP_User extends \XF\Entity\User {}
+	class XFCP_UserOption extends \XF\Entity\UserOption {}
 }
 
 namespace SV\FullMessageTextPermission\XF\Pub\Controller
