@@ -9,6 +9,12 @@ namespace SV\FullMessageTextPermission\XF\Entity
 	class XFCP_UserOption extends \XF\Entity\UserOption {}
 }
 
+namespace SV\FullMessageTextPermission\XF\Notifier\Post
+{
+	class XFCP_ForumWatch extends \XF\Notifier\Post\ForumWatch {}
+	class XFCP_ThreadWatch extends \XF\Notifier\Post\ThreadWatch {}
+}
+
 namespace SV\FullMessageTextPermission\XF\Pub\Controller
 {
 	class XFCP_Account extends \XF\Pub\Controller\Account {}

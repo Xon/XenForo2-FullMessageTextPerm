@@ -5,6 +5,12 @@
     "XF-Entity-User_SV-FullMessageTextPermission-XF-Entity-User.json": {
         "hash": "10c45c9f0f9173db846de601e458a31a"
     },
+    "XF-Notifier-Post-ForumWatch_SV-FullMessageTextPermission-XF-Notifier-Post-ForumWatch.json": {
+        "hash": "d2a9dc26bb0dd96059f61cb197698179"
+    },
+    "XF-Notifier-Post-ThreadWatch_SV-FullMessageTextPermission-XF-Notifier-Post-ThreadWatch.json": {
+        "hash": "c4519ee94c3f132de3ab51efd6b3beec"
+    },
     "XF-Pub-Controller-Account_SV-FullMessageTextPermission-XF-Pub-Controller-Account.json": {
         "hash": "74ade605ca9e9c8a3480b5022c98f9f9"
     },

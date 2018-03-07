@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\Notifier\\Post\\ForumWatch",
+    "to_class": "SV\\FullMessageTextPermission\\XF\\Notifier\\Post\\ForumWatch",
+    "execute_order": 10,
+    "active": true
+}

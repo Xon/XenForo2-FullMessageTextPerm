@@ -22,9 +22,9 @@ class User extends XFCP_User
     {
         switch ($type)
         {
-            case 'forum':
-            case 'thread':
-            case 'post':
+            case 'forum_reply':
+            case 'forum_thread':
+            case 'thread_reply':
                 $this->canReceiveFullEmailMessageContent = $this->hasNodePermission($nodeId, 'emailIncludeMessage');
                 break;
             case 'conversation_invite':
@@ -40,7 +40,7 @@ class User extends XFCP_User
                 }
                 break;
             default:
-                throw new \LogicException("Invalid type {$type} passed to canReceiveFullEmailMessageContent method.");
+                throw new \LogicException("Invalid type {$type} passed to configureFullEmailMessageContent method.");
         }
     }
 
