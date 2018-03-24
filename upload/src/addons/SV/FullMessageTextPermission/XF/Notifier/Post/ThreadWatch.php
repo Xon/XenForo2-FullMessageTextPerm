@@ -49,7 +49,7 @@ class ThreadWatch extends XFCP_ThreadWatch
     public function sendEmail(User $user)
     {
         /** @var \SV\FullMessageTextPermission\XF\Entity\User $user */
-        $user->configureFullEmailMessageContent('thread_'.$this->actionType, $this->post->Thread->node_id, true);
+        $user->configureFullEmailMessageContent('thread_'.$this->actionType, $this->post->Thread->node_id);
 
         return parent::sendEmail($user);
     }

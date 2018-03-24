@@ -49,7 +49,7 @@ class ForumWatch extends XFCP_ForumWatch
     public function sendEmail(User $user)
     {
         /** @var \SV\FullMessageTextPermission\XF\Entity\User $user */
-        $user->configureFullEmailMessageContent('forum_'.$this->actionType, $this->post->Thread->node_id, true);
+        $user->configureFullEmailMessageContent('forum_'.$this->actionType, $this->post->Thread->node_id);
 
         return parent::sendEmail($user);
     }

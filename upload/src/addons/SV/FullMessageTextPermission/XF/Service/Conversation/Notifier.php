@@ -33,10 +33,7 @@ class Notifier extends XFCP_Notifier
 
     protected function _sendNotifications($actionType, array $notifyUsers, ConversationMessage $message = null, User $sender = null)
     {
-        if ($this->forceWarningNotification)
-        {
-            $this->actionTypeForWarning = 'conversation_' . $actionType;
-        }
+        $this->actionTypeForWarning = 'conversation_' . $actionType;
 
         return parent::_sendNotifications($actionType, $notifyUsers, $message, $sender);
     }
@@ -44,10 +41,10 @@ class Notifier extends XFCP_Notifier
 
     protected function _canUserReceiveNotification(User $user, User $sender = null)
     {
-        if ($this->forceWarningNotification && $this->actionTypeForWarning)
+        if ($this->actionTypeForWarning)
         {
             /** @var \SV\FullMessageTextPermission\XF\Entity\User $user */
-            $user->configureFullEmailMessageContent($this->actionTypeForWarning, null, true);
+            $user->configureFullEmailMessageContent($this->actionTypeForWarning, null, $this->forceWarningNotification);
         }
 
         return parent::_canUserReceiveNotification($user, $sender);
