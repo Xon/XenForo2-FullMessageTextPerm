@@ -20,9 +20,6 @@
     "XF-Service-Conversation-Notifier_SV-FullMessageTextPermission-XF-Service-Conversation-Notifier.json": {
         "hash": "cd9967b99e06ac2f0a66609347fe8422"
     },
-    "XF-Service-Post-Notifier_SV-FullMessageTextPermission-XF-Service-Post-Notifier.json": {
-        "hash": "9e8765498f6df2595c16dbd488273c7b"
-    },
     "XF-Service-User-Warn_SV-FullMessageTextPermission-XF-Service-User-Warn.json": {
         "hash": "095c53921ea57aadd51796140e3267c9"
     }
