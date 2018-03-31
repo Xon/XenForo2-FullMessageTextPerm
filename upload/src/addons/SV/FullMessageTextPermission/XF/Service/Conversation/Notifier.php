@@ -9,7 +9,7 @@
 
 namespace SV\FullMessageTextPermission\XF\Service\Conversation;
 
-use SV\ContentRatings\Globals;
+use SV\FullMessageTextPermission\Globals;
 use XF\App;
 use XF\Entity\ConversationMaster;
 use XF\Entity\ConversationMessage;

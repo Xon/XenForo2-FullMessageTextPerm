@@ -9,7 +9,7 @@
 
 namespace SV\FullMessageTextPermission\XF\Service\Conversation;
 
-use SV\ContentRatings\Globals;
+use SV\FullMessageTextPermission\Globals;
 
 class Creator extends XFCP_Creator
 {
