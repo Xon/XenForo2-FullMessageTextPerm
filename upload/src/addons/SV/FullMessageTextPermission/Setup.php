@@ -41,6 +41,11 @@ class Setup extends AbstractSetup
         $this->installStep1();
     }
 
+    public function upgrade2000200Step2()
+    {
+        $this->installStep2();
+    }
+
     public function uninstallStep1()
     {
         $this->schemaManager()->alterTable('xf_user_option', function (Alter $table) {
