@@ -1,0 +1,9 @@
+{
+    "template": "user_edit",
+    "description": "",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "#(email_on_conversation.*?)(\\s*</xf:checkboxrow>)#si",
+    "replace": "$1\n<xf:option name=\"option[fmp_always_email_notify]\" checked=\"{{$user.Option.fmp_always_email_notify}}\">{{ phrase('sv_fullmessagetextpermission_always_email_notify') }}</xf:option>\n$2"
+}
