@@ -1,0 +1,9 @@
+{
+    "template": "helper_account",
+    "description": "Add additional account preferences",
+    "execution_order": 20,
+    "enabled": true,
+    "action": "str_replace",
+    "find": "<xf:option name=\"option[email_on_conversation]\"",
+    "replace": "<xf:option name=\"option[fmp_always_email_notify]\" label=\"{{ phrase('sv_fullmessagetextpermission_always_email_notify') }}\" checked=\"{$xf.visitor.Option.fmp_always_email_notify}\" disabled=\"{{!$xf.options.fmp_allowAlwaysEmailWatched}}\" /> \n$0"
+}

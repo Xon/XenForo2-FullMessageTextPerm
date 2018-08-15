@@ -1,9 +1,0 @@
-{
-    "template": "account_preferences",
-    "description": "",
-    "execution_order": 10,
-    "enabled": true,
-    "action": "str_replace",
-    "find": "<xf:option name=\"option[email_on_conversation]\"\n\t\t\t\t\tlabel=\"{{ phrase('receive_email_when_new_conversation_message_is_received') }}\"\n\t\t\t\t\tchecked=\"{$xf.visitor.Option.email_on_conversation}\"\n\t\t\t\t/>",
-    "replace": "<xf:option name=\"option[fmp_always_email_notify]\" label=\"{{ phrase('sv_fullmessagetextpermission_always_email_notify') }}\" checked=\"{$xf.visitor.Option.fmp_always_email_notify}\" disabled=\"{{!$xf.options.fmp_allowAlwaysEmailWatched}}\" /> \n$0"
-}
