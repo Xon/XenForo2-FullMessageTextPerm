@@ -1,4 +1,9 @@
 {
+    "admin/option_template_registrationDefaults_fmp.html": {
+        "version_id": 2000100,
+        "version_string": "2.0.1",
+        "hash": "ac06c3df2d30c128c5e635510a0587e9"
+    },
     "email/sv_fmtp_snippeting_macro.html": {
         "version_id": 2000070,
         "version_string": "2.0.0",
