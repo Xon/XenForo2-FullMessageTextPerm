@@ -18,15 +18,15 @@ use XF\Entity\User;
 class Notifier extends XFCP_Notifier
 {
     /** @var bool */
-    protected $forceWarningNotification = false;
+    protected $forceConversationNotification = false;
     /** @var bool */
     protected $actionTypeForWarning = null;
 
     public function __construct(App $app, ConversationMaster $conversation)
     {
-        if (Globals::$forceWarningNotification !== null)
+        if (Globals::$forceConversationNotification !== null)
         {
-            $this->forceWarningNotification = Globals::$forceWarningNotification;
+            $this->forceConversationNotification = Globals::$forceConversationNotification;
         }
         parent::__construct($app, $conversation);
     }
@@ -44,7 +44,7 @@ class Notifier extends XFCP_Notifier
         if ($this->actionTypeForWarning)
         {
             /** @var \SV\FullMessageTextPermission\XF\Entity\User $user */
-            $user->configureFullEmailMessageContent($this->actionTypeForWarning, null, $this->forceWarningNotification);
+            $user->configureFullEmailMessageContent($this->actionTypeForWarning, null, $this->forceConversationNotification);
         }
 
         return parent::_canUserReceiveNotification($user, $sender);

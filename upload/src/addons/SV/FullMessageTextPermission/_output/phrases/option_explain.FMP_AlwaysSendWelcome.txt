@@ -1,0 +1,1 @@
+Always send the full text of a conversation created for the welcome conversation

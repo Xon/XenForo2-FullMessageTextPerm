@@ -16,9 +16,9 @@ class User extends XFCP_User
     /**
      * @param string   $type
      * @param int|null $nodeId
-     * @param bool     $warningConversation
+     * @param bool     $forceConversationNotification
      */
-    public function configureFullEmailMessageContent($type, $nodeId = null, $warningConversation = false)
+    public function configureFullEmailMessageContent($type, $nodeId = null, $forceConversationNotification = false)
     {
         switch ($type)
         {
@@ -30,7 +30,7 @@ class User extends XFCP_User
             case 'conversation_invite':
             case 'conversation_create':
             case 'conversation_reply':
-                if ($warningConversation)
+                if ($forceConversationNotification)
                 {
                     $this->canReceiveFullEmailMessageContent = true;
                 }

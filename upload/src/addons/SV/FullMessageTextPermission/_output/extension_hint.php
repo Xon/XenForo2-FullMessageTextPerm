@@ -34,4 +34,5 @@ namespace SV\FullMessageTextPermission\XF\Service\Conversation
 namespace SV\FullMessageTextPermission\XF\Service\User
 {
 	class XFCP_Warn extends \XF\Service\User\Warn {}
+	class XFCP_Welcome extends \XF\Service\User\Welcome {}
 }

@@ -13,30 +13,30 @@ use SV\FullMessageTextPermission\Globals;
 
 class Creator extends XFCP_Creator
 {
-    protected $forceWarningNotification = null;
+    protected $forceConversationNotification = null;
 
-    public function forceWarningNotification($forceWarningNotification = null)
+    public function forceConversationNotification($forceConversationNotification = null)
     {
-        if ($forceWarningNotification === null)
+        if ($forceConversationNotification === null)
         {
-            return $this->forceWarningNotification;
+            return $this->forceConversationNotification;
         }
 
-        $this->forceWarningNotification = $forceWarningNotification;
+        $this->forceConversationNotification = $forceConversationNotification;
 
         return $this;
     }
 
     public function sendNotifications()
     {
-        Globals::$forceWarningNotification = $this->forceWarningNotification;
+        Globals::$forceConversationNotification = $this->forceConversationNotification;
         try
         {
             parent::sendNotifications();
         }
         finally
         {
-            Globals::$forceWarningNotification = null;
+            Globals::$forceConversationNotification = null;
         }
     }
 }

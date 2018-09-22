@@ -15,7 +15,7 @@ namespace SV\FullMessageTextPermission;
 class Globals
 {
     /** @var bool  */
-    public static $forceWarningNotification = null;
+    public static $forceConversationNotification = null;
 
     /**
      * Private constructor, use statically.
