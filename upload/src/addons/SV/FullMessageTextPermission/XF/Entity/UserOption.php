@@ -12,16 +12,6 @@ use XF\Mvc\Entity\Structure;
  */
 class UserOption extends XFCP_UserOption
 {
-    protected function _setupDefaults()
-    {
-        parent::_setupDefaults();
-
-        $options = \XF::options();
-
-        $defaults = $options->registrationDefaults;
-        $this->fmp_always_email_notify = $defaults['fmp_always_email_notify'] ? true : false;
-    }
-
     /**
      * @param Structure $structure
      * @return Structure
@@ -33,5 +23,15 @@ class UserOption extends XFCP_UserOption
         $structure->columns['fmp_always_email_notify'] = ['type' => Entity::BOOL, 'default' => 0];
 
         return $structure;
+    }
+
+    protected function _setupDefaults()
+    {
+        parent::_setupDefaults();
+
+        $options = \XF::options();
+
+        $defaults = $options->registrationDefaults;
+        $this->fmp_always_email_notify = $defaults['fmp_always_email_notify'] ? true : false;
     }
 }

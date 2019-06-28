@@ -1,12 +1,5 @@
 <?php
 
-/*
- * This file is part of a XenForo add-on.
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
 namespace SV\FullMessageTextPermission\XF\Notifier\Post;
 
 use SV\FullMessageTextPermission\XF\Entity\UserOption;
@@ -43,13 +36,14 @@ class ForumWatch extends XFCP_ForumWatch
                 $this->userReadDates[$user->user_id] = $this->now;
             }
         }
+
         return parent::canNotify($user);
     }
 
     public function sendEmail(User $user)
     {
         /** @var \SV\FullMessageTextPermission\XF\Entity\User $user */
-        $user->configureFullEmailMessageContent('forum_'.$this->actionType, $this->post->Thread->node_id);
+        $user->configureFullEmailMessageContent('forum_' . $this->actionType, $this->post->Thread->node_id);
 
         return parent::sendEmail($user);
     }
