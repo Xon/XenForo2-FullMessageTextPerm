@@ -26,8 +26,8 @@ class ForumWatch extends XFCP_ForumWatch
 
     public function __construct(App $app, Post $post, $actionType)
     {
-        // \XF::$time is anchored to the start of the request, but post date is based off the wall clock
-        $this->now = intval(microtime(true));
+        // canNotify clamps if the last read-date is after the last post, but we want to alert anyway
+        $this->now = $post->post_date > $post->Thread->last_post_date ? $post->Thread->last_post_date : $post->post_date;
         $this->allowAlwaysSent = \XF::options()->fmp_allowAlwaysEmailWatched;
         parent::__construct($app, $post, $actionType);
     }
