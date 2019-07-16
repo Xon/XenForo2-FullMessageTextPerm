@@ -3,6 +3,11 @@
 // ################## THIS IS A GENERATED FILE ##################
 // DO NOT EDIT DIRECTLY. EDIT THE CLASS EXTENSIONS IN THE CONTROL PANEL.
 
+namespace SV\FullMessageTextPermission\SV\ThreadStarterAlerts\Notifier
+{
+	class XFCP_ThreadStarterWatch extends \SV\ThreadStarterAlerts\Notifier\ThreadStarterWatch {}
+}
+
 namespace SV\FullMessageTextPermission\XF\Admin\Controller
 {
 	class XFCP_User extends \XF\Admin\Controller\User {}
