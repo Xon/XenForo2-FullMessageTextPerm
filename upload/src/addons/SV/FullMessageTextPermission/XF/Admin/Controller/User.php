@@ -18,14 +18,17 @@ class User extends XFCP_User
     {
         $formAction = parent::userSaveProcess($user);
 
-        $input = $this->filter([
-            'option' => [
-                'fmp_always_email_notify' => 'bool',
-            ],
-        ]);
+        if (\XF::options()->fmp_allowAlwaysEmailWatched)
+        {
+            $input = $this->filter([
+                'option' => [
+                    'fmp_always_email_notify' => 'bool',
+                ],
+            ]);
 
-        $userOptions = $user->getRelationOrDefault('Option');
-        $formAction->setupEntityInput($userOptions, $input['option']);
+            $userOptions = $user->getRelationOrDefault('Option');
+            $formAction->setupEntityInput($userOptions, $input['option']);
+        }
 
         return $formAction;
     }
