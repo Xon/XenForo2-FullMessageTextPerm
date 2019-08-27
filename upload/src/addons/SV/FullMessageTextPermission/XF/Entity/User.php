@@ -33,7 +33,12 @@ class User extends XFCP_User
                 }
                 break;
             default:
-                throw new \LogicException("Invalid type {$type} passed to configureFullEmailMessageContent method.");
+                if (\XF::$developmentMode)
+                {
+                    throw new \LogicException("Invalid type {$type} passed to configureFullEmailMessageContent method.");
+                }
+                $this->canReceiveFullEmailMessageContent = true;
+                break;
         }
     }
 
