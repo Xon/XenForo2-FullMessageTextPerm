@@ -32,6 +32,6 @@ class UserOption extends XFCP_UserOption
         $options = \XF::options();
 
         $defaults = $options->registrationDefaults;
-        $this->fmp_always_email_notify = $defaults['fmp_always_email_notify'] ? true : false;
+        $this->fmp_always_email_notify = isset($defaults['fmp_always_email_notify']) ? (bool)$defaults['fmp_always_email_notify'] : false;
     }
 }
