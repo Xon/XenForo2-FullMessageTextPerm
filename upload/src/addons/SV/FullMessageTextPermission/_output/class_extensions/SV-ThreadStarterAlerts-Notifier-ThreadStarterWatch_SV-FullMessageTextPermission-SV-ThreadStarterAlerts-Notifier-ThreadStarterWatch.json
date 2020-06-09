@@ -1,6 +1,6 @@
 {
     "from_class": "SV\\ThreadStarterAlerts\\Notifier\\ThreadStarterWatch",
     "to_class": "SV\\FullMessageTextPermission\\SV\\ThreadStarterAlerts\\Notifier\\ThreadStarterWatch",
-    "execute_order": 10,
+    "execute_order": 6291,
     "active": true
 }
