@@ -1,0 +1,6 @@
+{
+    "from_class": "XF\\ChangeLog\\User",
+    "to_class": "SV\\FullMessageTextPermission\\XF\\ChangeLog\\User",
+    "execute_order": 6291,
+    "active": true
+}

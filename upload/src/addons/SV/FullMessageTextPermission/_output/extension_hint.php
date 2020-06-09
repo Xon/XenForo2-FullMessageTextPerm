@@ -13,6 +13,11 @@ namespace SV\FullMessageTextPermission\XF\Admin\Controller
 	class XFCP_User extends \XF\Admin\Controller\User {}
 }
 
+namespace SV\FullMessageTextPermission\XF\ChangeLog
+{
+	class XFCP_User extends \XF\ChangeLog\User {}
+}
+
 namespace SV\FullMessageTextPermission\XF\Entity
 {
 	class XFCP_User extends \XF\Entity\User {}
