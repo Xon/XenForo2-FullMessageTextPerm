@@ -7,7 +7,7 @@ namespace SV\FullMessageTextPermission\XF\ChangeLog;
  */
 class User extends XFCP_User
 {
-    public function getLabelMap()
+    protected function getLabelMap()
     {
         $map = parent::getLabelMap();
         $map['fmp_always_email_notify'] = 'sv_fullmessagetextpermission_always_email_notify';
@@ -15,7 +15,7 @@ class User extends XFCP_User
         return $map;
     }
 
-    public function getFormatterMap()
+    protected function getFormatterMap()
     {
         $map = parent::getFormatterMap();
         $map['fmp_always_email_notify'] = 'formatYesNo';
