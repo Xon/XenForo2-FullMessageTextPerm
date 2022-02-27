@@ -7,10 +7,11 @@
 
 	<xf:if is="$user.canReceiveFullEmailMessageContent()">
 		<xf:set var="$hasThreadmark" value="{{ (
-			$content.isValidRelation('Threadmark') &&
-			$content.Threadmark &&
-			$content.Threadmark.isVisible() &&
-			$content.Threadmark.canView()
+			$context &&
+			$context.isValidRelation('Threadmark') &&
+			$context.Threadmark &&
+			$context.Threadmark.isVisible() &&
+			$context.Threadmark.canView()
 		) ? true : false }}" />
 		<xf:set var="$trimLength" value="{{ $hasThreadmark
 			? $xf.options.sv_fmp_threadmark_text_trim_length

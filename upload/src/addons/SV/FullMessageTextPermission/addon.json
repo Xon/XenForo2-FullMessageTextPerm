@@ -2,7 +2,7 @@
     "legacy_addon_id": "FullMessageTextPerm",
     "title": "Email Full Message Text Permission",
     "description": "Adds permissions to include full message text in emails, per usergroup",
-    "version_id": 2030000,
+    "version_id": 2030002,
     "version_string": "2.3.0",
     "dev" : "Xon",
     "dev_url": "https://atelieraphelion.com/",
