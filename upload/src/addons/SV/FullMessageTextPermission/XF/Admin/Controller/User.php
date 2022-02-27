@@ -1,4 +1,7 @@
 <?php
+/**
+ * @noinspection PhpMissingReturnTypeInspection
+ */
 
 namespace SV\FullMessageTextPermission\XF\Admin\Controller;
 
@@ -18,7 +21,7 @@ class User extends XFCP_User
     {
         $formAction = parent::userSaveProcess($user);
 
-        if (\XF::options()->fmp_allowAlwaysEmailWatched)
+        if (\XF::options()->fmp_allowAlwaysEmailWatched ?? false)
         {
             $input = $this->filter([
                 'option' => [

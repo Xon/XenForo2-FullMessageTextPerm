@@ -7,7 +7,7 @@ namespace SV\FullMessageTextPermission;
  */
 class Globals
 {
-    /** @var bool */
+    /** @var bool|null */
     public static $forceConversationNotification = null;
 
     /**

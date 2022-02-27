@@ -1,4 +1,7 @@
 <?php
+/**
+ * @noinspection PhpMissingReturnTypeInspection
+ */
 
 namespace SV\FullMessageTextPermission\XF\Notifier\Post;
 
@@ -6,6 +9,7 @@ use SV\FullMessageTextPermission\XF\Entity\UserOption;
 use XF\App;
 use XF\Entity\Post;
 use XF\Entity\User;
+use function min;
 
 /**
  * Extends \XF\Notifier\Post\ThreadWatch
@@ -20,8 +24,8 @@ class ThreadWatch extends XFCP_ThreadWatch
     public function __construct(App $app, Post $post, $actionType)
     {
         // canNotify clamps if the last read-date is after the last post, but we want to alert anyway
-        $this->now = $post->post_date > $post->Thread->last_post_date ? $post->Thread->last_post_date : $post->post_date;
-        $this->allowAlwaysSent = \XF::options()->fmp_allowAlwaysEmailWatched;
+        $this->now = min($post->post_date, $post->Thread->last_post_date);
+        $this->allowAlwaysSent = \XF::options()->fmp_allowAlwaysEmailWatched ?? false;
         parent::__construct($app, $post, $actionType);
     }
 
@@ -31,7 +35,7 @@ class ThreadWatch extends XFCP_ThreadWatch
         {
             /** @var UserOption $option */
             $option = $user->Option;
-            if ($option->fmp_always_email_notify)
+            if ($option->fmp_always_email_notify ?? false)
             {
                 $this->userReadDates[$user->user_id] = $this->now;
             }

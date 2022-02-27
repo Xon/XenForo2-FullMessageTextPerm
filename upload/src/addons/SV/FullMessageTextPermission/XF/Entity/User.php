@@ -4,6 +4,7 @@ namespace SV\FullMessageTextPermission\XF\Entity;
 
 class User extends XFCP_User
 {
+    /** @var bool */
     protected $canReceiveFullEmailMessageContent = true;
 
     /**
@@ -11,7 +12,7 @@ class User extends XFCP_User
      * @param int|null $nodeId
      * @param bool     $forceConversationNotification
      */
-    public function configureFullEmailMessageContent($type, $nodeId = null, $forceConversationNotification = false)
+    public function configureFullEmailMessageContent(string $type, int $nodeId = null, bool $forceConversationNotification = false)
     {
         switch ($type)
         {
@@ -42,12 +43,7 @@ class User extends XFCP_User
         }
     }
 
-    /**
-     * This function relies on user state to be setup before hand
-     *
-     * @return bool
-     */
-    public function canReceiveFullEmailMessageContent()
+    public function canReceiveFullEmailMessageContent(): bool
     {
         return $this->canReceiveFullEmailMessageContent;
     }

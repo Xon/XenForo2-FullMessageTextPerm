@@ -1,4 +1,7 @@
 <?php
+/**
+ * @noinspection PhpMissingReturnTypeInspection
+ */
 
 namespace SV\FullMessageTextPermission\XF\Service\Conversation;
 
@@ -12,15 +15,12 @@ class Notifier extends XFCP_Notifier
 {
     /** @var bool */
     protected $forceConversationNotification = false;
-    /** @var bool */
+    /** @var string|null */
     protected $actionTypeForWarning = null;
 
     public function __construct(App $app, ConversationMaster $conversation)
     {
-        if (Globals::$forceConversationNotification !== null)
-        {
-            $this->forceConversationNotification = Globals::$forceConversationNotification;
-        }
+        $this->forceConversationNotification = Globals::$forceConversationNotification ?? false;
         parent::__construct($app, $conversation);
     }
 

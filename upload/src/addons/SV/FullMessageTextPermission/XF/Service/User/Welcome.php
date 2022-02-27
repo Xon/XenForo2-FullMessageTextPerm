@@ -8,7 +8,7 @@ class Welcome extends XFCP_Welcome
 {
     public function sendMessage()
     {
-        Globals::$forceConversationNotification = \XF::options()->FMP_AlwaysSendWelcome;
+        Globals::$forceConversationNotification = \XF::options()->FMP_AlwaysSendWelcome ?? true;
         try
         {
             parent::sendMessage();

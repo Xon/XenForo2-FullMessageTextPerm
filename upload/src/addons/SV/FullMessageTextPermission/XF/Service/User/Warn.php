@@ -1,4 +1,7 @@
 <?php
+/**
+ * @noinspection PhpMissingReturnTypeInspection
+ */
 
 namespace SV\FullMessageTextPermission\XF\Service\User;
 
@@ -11,7 +14,7 @@ class Warn extends XFCP_Warn
         /** @var \SV\FullMessageTextPermission\XF\Service\Conversation\Creator $creator */
         $creator = parent::setupConversation($warning);
 
-        if (\XF::options()->FMP_AlwaysSendWarning)
+        if (\XF::options()->FMP_AlwaysSendWarning ?? true)
         {
             $creator->forceConversationNotification(true);
         }

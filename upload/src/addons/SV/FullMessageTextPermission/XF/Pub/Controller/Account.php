@@ -1,4 +1,7 @@
 <?php
+/**
+ * @noinspection PhpMissingReturnTypeInspection
+ */
 
 namespace SV\FullMessageTextPermission\XF\Pub\Controller;
 
@@ -10,7 +13,7 @@ class Account extends XFCP_Account
     {
         $form = parent::preferencesSaveProcess($visitor);
 
-        if (\XF::options()->fmp_allowAlwaysEmailWatched)
+        if (\XF::options()->fmp_allowAlwaysEmailWatched ?? false)
         {
             $input = $this->filter(
                 [
