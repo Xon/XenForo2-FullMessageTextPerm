@@ -6,16 +6,22 @@
 		  >
 
 	<xf:if is="$user.canReceiveFullEmailMessageContent()">
-		<xf:if is="$xf.options.sv_fmp_full_text_trim_length < 0">
-			<div class="message">{{ bb_code_type('emailHtml', $message, $type, $context) }}</div>
-		<xf:elseif is="$xf.options.sv_fmp_full_text_trim_length > 0" />
-			<div class="message">{{ bb_code_type('emailHtml', snippet($message, $xf.options.sv_fmp_full_text_trim_length), $type, $context) }}</div>
-		</xf:if>
+		<xf:set var="$hasThreadmark" value="{{ (
+			$content.isValidRelation('Threadmark') &&
+			$content.Threadmark &&
+			$content.Threadmark.isVisible() &&
+			$content.Threadmark.canView()
+		) ? true : false }}" />
+		<xf:set var="$trimLength" value="{{ $hasThreadmark
+			? $xf.options.sv_fmp_threadmark_text_trim_length
+			: $xf.options.sv_fmp_full_text_trim_length
+		}}" />
 	<xf:else />
-		<xf:if is="$xf.options.sv_fmp_text_trim_length < 0">
-			<div class="message">{{ bb_code_type('emailHtml', $message, $type, $context) }}</div>
-		<xf:elseif is="$xf.options.sv_fmp_text_trim_length > 0" />
-			<div class="message">{{ bb_code_type('emailHtml', snippet($message, $xf.options.sv_fmp_text_trim_length), $type, $context) }}</div>
-		</xf:if>
+		<xf:set var="$trimLength" value="{{ $xf.options.sv_fmp_text_trim_length }}" />
+	</xf:if>
+	<xf:if is="$trimLength < 0">
+		<div class="message">{{ bb_code_type('emailHtml', $message, $type, $context) }}</div>
+	<xf:elseif is="$trimLength > 0" />
+		<div class="message">{{ bb_code_type('emailHtml', snippet($message, $xf.options.sv_fmp_text_trim_length), $type, $context) }}</div>
 	</xf:if>
 </xf:macro>

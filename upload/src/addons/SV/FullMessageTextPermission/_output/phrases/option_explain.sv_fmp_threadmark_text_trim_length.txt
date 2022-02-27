@@ -1,0 +1,4 @@
+If the message has a threadmark, and the user does have permission to include the full message text; this number of characters of the message can be send instead.<br/>
+<br/>
+0 means no message text is sent.<br/>
+-1 means all message text is sent

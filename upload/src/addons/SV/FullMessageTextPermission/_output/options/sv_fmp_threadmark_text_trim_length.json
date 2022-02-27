@@ -8,6 +8,6 @@
     "advanced": false,
     "default_value": "-1",
     "relations": {
-        "sv_fulltextmessagepermission": 140
+        "sv_fulltextmessagepermission": 130
     }
 }
