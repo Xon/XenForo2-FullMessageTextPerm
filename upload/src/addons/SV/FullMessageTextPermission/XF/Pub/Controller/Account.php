@@ -13,7 +13,7 @@ class Account extends XFCP_Account
     {
         $form = parent::preferencesSaveProcess($visitor);
 
-        if (\XF::options()->fmp_allowAlwaysEmailWatched ?? false)
+        if (\XF::options()->sv_fmp_allow_always_email_watched ?? false)
         {
             $input = $this->filter(
                 [

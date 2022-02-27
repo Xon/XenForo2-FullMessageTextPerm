@@ -25,7 +25,7 @@ class ThreadWatch extends XFCP_ThreadWatch
     {
         // canNotify clamps if the last read-date is after the last post, but we want to alert anyway
         $this->now = min($post->post_date, $post->Thread->last_post_date);
-        $this->allowAlwaysSent = \XF::options()->fmp_allowAlwaysEmailWatched ?? false;
+        $this->allowAlwaysSent = \XF::options()->sv_fmp_allow_always_email_watched ?? false;
         parent::__construct($app, $post, $actionType);
     }
 

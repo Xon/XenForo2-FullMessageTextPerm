@@ -6,16 +6,16 @@
 		  >
 
 	<xf:if is="$user.canReceiveFullEmailMessageContent()">
-		<xf:if is="$xf.options.FMP_TextTrimLengthFull < 0">
+		<xf:if is="$xf.options.sv_fmp_full_text_trim_length < 0">
 			<div class="message">{{ bb_code_type('emailHtml', $message, $type, $context) }}</div>
-		<xf:elseif is="$xf.options.FMP_TextTrimLengthFull > 0" />
-			<div class="message">{{ bb_code_type('emailHtml', snippet($message, $xf.options.FMP_TextTrimLengthFull), $type, $context) }}</div>
+		<xf:elseif is="$xf.options.sv_fmp_full_text_trim_length > 0" />
+			<div class="message">{{ bb_code_type('emailHtml', snippet($message, $xf.options.sv_fmp_full_text_trim_length), $type, $context) }}</div>
 		</xf:if>
 	<xf:else />
-		<xf:if is="$xf.options.FMP_TextTrimLength < 0">
+		<xf:if is="$xf.options.sv_fmp_text_trim_length < 0">
 			<div class="message">{{ bb_code_type('emailHtml', $message, $type, $context) }}</div>
-		<xf:elseif is="$xf.options.FMP_TextTrimLength > 0" />
-			<div class="message">{{ bb_code_type('emailHtml', snippet($message, $xf.options.FMP_TextTrimLength), $type, $context) }}</div>
+		<xf:elseif is="$xf.options.sv_fmp_text_trim_length > 0" />
+			<div class="message">{{ bb_code_type('emailHtml', snippet($message, $xf.options.sv_fmp_text_trim_length), $type, $context) }}</div>
 		</xf:if>
 	</xf:if>
 </xf:macro>

@@ -40,6 +40,15 @@ class Setup extends AbstractSetup
         $this->installStep2();
     }
 
+    public function upgrade2030000Step1()
+    {
+        $this->renameOption('FMP_AlwaysSendWarning', 'sv_fmp_always_send_warning');
+        $this->renameOption('FMP_AlwaysSendWelcome', 'sv_fmp_always_send_welcome');
+        $this->renameOption('fmp_allowAlwaysEmailWatched', 'sv_fmp_allow_always_email_watched');
+        $this->renameOption('FMP_TextTrimLength', 'sv_fmp_text_trim_length');
+        $this->renameOption('FMP_TextTrimLengthFull', 'sv_fmp_full_text_trim_length');
+    }
+
     public function uninstallStep1()
     {
         $this->schemaManager()->alterTable('xf_user_option', function (Alter $table) {

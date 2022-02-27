@@ -5,8 +5,9 @@
     "sub_options": [],
     "validation_class": "",
     "validation_method": "",
-    "default_value": "0",
+    "advanced": false,
+    "default_value": "-1",
     "relations": {
-        "sv_fulltextmessagepermission": 120
+        "sv_fulltextmessagepermission": 130
     }
 }

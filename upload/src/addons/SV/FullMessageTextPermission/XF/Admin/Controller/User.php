@@ -21,7 +21,7 @@ class User extends XFCP_User
     {
         $formAction = parent::userSaveProcess($user);
 
-        if (\XF::options()->fmp_allowAlwaysEmailWatched ?? false)
+        if (\XF::options()->sv_fmp_allow_always_email_watched ?? false)
         {
             $input = $this->filter([
                 'option' => [
