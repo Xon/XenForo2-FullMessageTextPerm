@@ -16,31 +16,31 @@ class Setup extends AbstractSetup
     use StepRunnerUpgradeTrait;
     use StepRunnerUninstallTrait;
 
-    public function installStep1()
+    public function installStep1(): void
     {
         $this->schemaManager()->alterTable('xf_user_option', function (Alter $table) {
             $this->addOrChangeColumn($table, 'fmp_always_email_notify', 'tinyint', 3)->setDefault(0);
         });
     }
 
-    public function installStep2()
+    public function installStep2(): void
     {
         $this->applyRegistrationDefaults([
             'fmp_always_email_notify' => 0,
         ]);
     }
 
-    public function upgrade2000200Step1()
+    public function upgrade2000200Step1(): void
     {
         $this->installStep1();
     }
 
-    public function upgrade2000200Step2()
+    public function upgrade2000200Step2(): void
     {
         $this->installStep2();
     }
 
-    public function upgrade2030000Step1()
+    public function upgrade2030000Step1(): void
     {
         $this->renameOption('FMP_AlwaysSendWarning', 'sv_fmp_always_send_warning');
         $this->renameOption('FMP_AlwaysSendWelcome', 'sv_fmp_always_send_welcome');
@@ -49,7 +49,7 @@ class Setup extends AbstractSetup
         $this->renameOption('FMP_TextTrimLengthFull', 'sv_fmp_full_text_trim_length');
     }
 
-    public function postUpgrade($previousVersion, array &$stateChanges)
+    public function postUpgrade($previousVersion, array &$stateChanges): void
     {
         if ($previousVersion && $previousVersion < 2030000)
         {
@@ -66,7 +66,7 @@ class Setup extends AbstractSetup
         }
     }
 
-    public function uninstallStep1()
+    public function uninstallStep1(): void
     {
         $this->schemaManager()->alterTable('xf_user_option', function (Alter $table) {
             $table->dropColumns('fmp_always_email_notify');

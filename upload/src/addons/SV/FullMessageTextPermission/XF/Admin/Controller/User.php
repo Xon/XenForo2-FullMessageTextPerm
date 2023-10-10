@@ -5,6 +5,10 @@
 
 namespace SV\FullMessageTextPermission\XF\Admin\Controller;
 
+use XF\Entity\User as UserEntity;
+use XF\Mvc\FormAction;
+use XF\Mvc\Reply\Exception as ReplyException;
+
 /**
  * Class User
  *
@@ -13,11 +17,11 @@ namespace SV\FullMessageTextPermission\XF\Admin\Controller;
 class User extends XFCP_User
 {
     /**
-     * @param \XF\Entity\User $user
-     * @return \XF\Mvc\FormAction
-     * @throws \XF\Mvc\Reply\Exception
+     * @param UserEntity $user
+     * @return FormAction
+     * @throws ReplyException
      */
-    protected function userSaveProcess(\XF\Entity\User $user)
+    protected function userSaveProcess(UserEntity $user)
     {
         $formAction = parent::userSaveProcess($user);
 
