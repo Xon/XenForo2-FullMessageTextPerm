@@ -2,13 +2,15 @@
     "legacy_addon_id": "FullMessageTextPerm",
     "title": "Email Full Message Text Permission",
     "description": "Adds permissions to include full message text in emails, per usergroup",
-    "version_id": 2030002,
-    "version_string": "2.3.0",
-    "dev" : "Xon",
+    "version_id": 1696961766,
+    "version_string": "2.4.0",
+    "dev": "Xon",
     "dev_url": "https://atelieraphelion.com/",
     "faq_url": "",
     "support_url": "https://xenforo.com/community/resources/full-message-text-permission.6291/",
-    "extra_urls": [],
+    "extra_urls": {
+        "Add-on site": "https://atelieraphelion.com/products/full-message-text-permission.178/"
+    },
     "require": {
         "SV/StandardLib": [
             2001180000,
@@ -23,8 +25,11 @@
             "PHP 7.2.0+"
         ]
     },
-    "require-soft" :{
-        "SV/ThreadStarterAlerts": [2010000, "Thread Starter Alerts v2.1.0+"]
+    "require-soft": {
+        "SV/ThreadStarterAlerts": [
+            2010000,
+            "Thread Starter Alerts v2.1.0+"
+        ]
     },
     "icon": ""
 }
