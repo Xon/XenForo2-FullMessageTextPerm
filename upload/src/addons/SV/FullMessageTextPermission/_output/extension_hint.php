@@ -1,10 +1,12 @@
 <?php
 
+/** @noinspection PhpIllegalPsrClassPathInspection */
 // ################## THIS IS A GENERATED FILE ##################
 // DO NOT EDIT DIRECTLY. EDIT THE CLASS EXTENSIONS IN THE CONTROL PANEL.
 
 namespace SV\FullMessageTextPermission\SV\ThreadStarterAlerts\Notifier
 {
+	class XFCP_ThreadmarkWatch extends \SV\ThreadStarterAlerts\Notifier\ThreadmarkWatch {}
 	class XFCP_ThreadStarterWatch extends \SV\ThreadStarterAlerts\Notifier\ThreadStarterWatch {}
 }
 

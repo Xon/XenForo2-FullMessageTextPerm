@@ -1,0 +1,6 @@
+{
+    "from_class": "SV\\ThreadStarterAlerts\\Notifier\\ThreadmarkWatch",
+    "to_class": "SV\\FullMessageTextPermission\\SV\\ThreadStarterAlerts\\Notifier\\ThreadmarkWatch",
+    "execute_order": 6291,
+    "active": true
+}
