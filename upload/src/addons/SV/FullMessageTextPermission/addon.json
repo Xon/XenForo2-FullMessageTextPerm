@@ -21,7 +21,7 @@
         "php": [
             "7.2.0",
             "PHP 7.2.0+"
-        ],
+        ]
     },
     "require-soft" :{
         "SV/ThreadStarterAlerts": [2010000, "Thread Starter Alerts v2.1.0+"]
