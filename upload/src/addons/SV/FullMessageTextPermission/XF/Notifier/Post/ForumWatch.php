@@ -48,7 +48,13 @@ class ForumWatch extends XFCP_ForumWatch
     {
         /** @var \SV\FullMessageTextPermission\XF\Entity\User $user */
         $user->configureFullEmailMessageContent('forum_' . $this->actionType, $this->post->Thread->node_id);
-
-        return parent::sendEmail($user);
+        try
+        {
+            return parent::sendEmail($user);
+        }
+        finally
+        {
+            $user->resetCanReceiveFullEmailMessageContent();
+        }
     }
 }

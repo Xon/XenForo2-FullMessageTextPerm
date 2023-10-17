@@ -17,7 +17,13 @@ class ThreadmarkWatch extends XFCP_ThreadmarkWatch
         $type = ($this->actionType === 'thread' ? 'forum_thread' : 'thread_reply');
         /** @var \SV\FullMessageTextPermission\XF\Entity\User $user */
         $user->configureFullEmailMessageContent($type, $this->post->Thread->node_id);
-
-        return parent::sendEmail($user);
+        try
+        {
+            return parent::sendEmail($user);
+        }
+        finally
+        {
+            $user->resetCanReceiveFullEmailMessageContent();
+        }
     }
 }

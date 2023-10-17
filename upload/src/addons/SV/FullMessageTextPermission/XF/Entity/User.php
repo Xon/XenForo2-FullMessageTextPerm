@@ -43,6 +43,11 @@ class User extends XFCP_User
         }
     }
 
+    public function resetCanReceiveFullEmailMessageContent(): void
+    {
+        $this->canReceiveFullEmailMessageContent = true;
+    }
+
     public function canReceiveFullEmailMessageContent(): bool
     {
         return $this->canReceiveFullEmailMessageContent;
