@@ -4,22 +4,7 @@
 		  arg-type="!"
 		  arg-context="!"
 		  >
-
-	<xf:if is="$user.canReceiveFullEmailMessageContent()">
-		<xf:set var="$hasThreadmark" value="{{ (
-			$context &&
-			$context.isValidRelation('Threadmark') &&
-			$context.Threadmark &&
-			$context.Threadmark.isVisible() &&
-			$context.Threadmark.canView()
-		) ? true : false }}" />
-		<xf:set var="$trimLength" value="{{ $hasThreadmark
-			? $xf.options.sv_fmp_threadmark_text_trim_length
-			: $xf.options.sv_fmp_full_text_trim_length
-		}}" />
-	<xf:else />
-		<xf:set var="$trimLength" value="{{ $xf.options.sv_fmp_text_trim_length }}" />
-	</xf:if>
+	<xf:set var="$trimLength" value="{{ $user.getSvWatchedThreadEmailTrimLength($context) }}" />
 	<xf:if is="$trimLength < 0">
 		<div class="message">{{ bb_code_type('emailHtml', $message, $type, $context) }}</div>
 	<xf:elseif is="$trimLength > 0" />
