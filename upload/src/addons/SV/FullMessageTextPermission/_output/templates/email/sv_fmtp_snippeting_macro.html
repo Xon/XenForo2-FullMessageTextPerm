@@ -23,6 +23,6 @@
 	<xf:if is="$trimLength < 0">
 		<div class="message">{{ bb_code_type('emailHtml', $message, $type, $context) }}</div>
 	<xf:elseif is="$trimLength > 0" />
-		<div class="message">{{ bb_code_type('emailHtml', snippet($message, $xf.options.sv_fmp_text_trim_length), $type, $context) }}</div>
+		<div class="message">{{ bb_code_type('emailHtml', snippet($message, $trimLength), $type, $context) }}</div>
 	</xf:if>
 </xf:macro>
