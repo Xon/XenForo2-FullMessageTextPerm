@@ -9,9 +9,9 @@ use XF\Mvc\Entity\Entity;
 use XF\Mvc\Entity\Structure;
 
 /**
- * Extends \XF\Entity\UserOption
+ * @extends \XF\Entity\UserOption
  *
- * @property bool fmp_always_email_notify
+ * @property bool $fmp_always_email_notify
  */
 class UserOption extends XFCP_UserOption
 {

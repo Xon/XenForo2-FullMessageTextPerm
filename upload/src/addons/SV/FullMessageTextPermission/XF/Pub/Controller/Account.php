@@ -5,11 +5,14 @@
 
 namespace SV\FullMessageTextPermission\XF\Pub\Controller;
 
-use XF\Entity\User;
+use XF\Entity\User as UserEntity;
 
+/**
+ * @extends \XF\Pub\Controller\Account
+ */
 class Account extends XFCP_Account
 {
-    protected function preferencesSaveProcess(User $visitor)
+    protected function preferencesSaveProcess(UserEntity $visitor)
     {
         $form = parent::preferencesSaveProcess($visitor);
 

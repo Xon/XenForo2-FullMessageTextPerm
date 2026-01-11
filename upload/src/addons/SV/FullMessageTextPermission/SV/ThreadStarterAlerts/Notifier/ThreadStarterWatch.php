@@ -5,17 +5,18 @@
 
 namespace SV\FullMessageTextPermission\SV\ThreadStarterAlerts\Notifier;
 
-use XF\Entity\User;
+use SV\FullMessageTextPermission\XF\Entity\User as ExtendedUserEntity;
+use XF\Entity\User as UserEntity;
 
 /**
- * Extends \SV\ThreadStarterAlerts\Notifier\ThreadStarterWatch
+ * @extends \SV\ThreadStarterAlerts\Notifier\ThreadStarterWatch
  */
 class ThreadStarterWatch extends XFCP_ThreadStarterWatch
 {
-    public function sendEmail(User $user)
+    public function sendEmail(UserEntity $user)
     {
         $type = ($this->actionType === 'thread' ? 'forum_thread' : 'thread_reply');
-        /** @var \SV\FullMessageTextPermission\XF\Entity\User $user */
+        /** @var ExtendedUserEntity $user */
         $user->configureFullEmailMessageContent($type, $this->post->Thread->node_id);
         try
         {

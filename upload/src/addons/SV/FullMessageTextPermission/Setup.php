@@ -2,12 +2,14 @@
 
 namespace SV\FullMessageTextPermission;
 
+use SV\StandardLib\Helper;
 use SV\StandardLib\InstallerHelper;
 use XF\AddOn\AbstractSetup;
 use XF\AddOn\StepRunnerInstallTrait;
 use XF\AddOn\StepRunnerUninstallTrait;
 use XF\AddOn\StepRunnerUpgradeTrait;
 use XF\Db\Schema\Alter;
+use XF\Entity\Option as OptionEntity;
 
 class Setup extends AbstractSetup
 {
@@ -51,13 +53,14 @@ class Setup extends AbstractSetup
 
     public function postUpgrade($previousVersion, array &$stateChanges): void
     {
-        if ($previousVersion && $previousVersion < 2030000)
+        $previousVersion = (int)$previousVersion;
+        parent::postUpgrade($previousVersion, $stateChanges);
+
+        if ($previousVersion !== 0 && $previousVersion < 2030000)
         {
-            /** @var \XF\Entity\Option $src */
-            $src = $this->app->find('XF:Option', 'sv_fmp_full_text_trim_length');
-            /** @var \XF\Entity\Option $dest */
-            $dest = $this->app->find('XF:Option', 'sv_fmp_threadmark_text_trim_length');
-            if ($src && $dest)
+            $src = Helper::find(OptionEntity::class, 'sv_fmp_full_text_trim_length');
+            $dest = Helper::find(OptionEntity::class, 'sv_fmp_threadmark_text_trim_length');
+            if ($src !== null && $dest !== null)
             {
                 $dest->option_value = $src->option_value;
                 $dest->saveIfChanged();

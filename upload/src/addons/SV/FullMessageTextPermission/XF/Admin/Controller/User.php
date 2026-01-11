@@ -10,9 +10,7 @@ use XF\Mvc\FormAction;
 use XF\Mvc\Reply\Exception as ReplyException;
 
 /**
- * Class User
- *
- * @package SV\FullMessageTextPermission
+ * @extends \XF\Admin\Controller\User
  */
 class User extends XFCP_User
 {

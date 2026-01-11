@@ -6,7 +6,7 @@
 namespace SV\FullMessageTextPermission\XF\ChangeLog;
 
 /**
- * Extends \XF\ChangeLog\User
+ * @extends \XF\ChangeLog\User
  */
 class User extends XFCP_User
 {

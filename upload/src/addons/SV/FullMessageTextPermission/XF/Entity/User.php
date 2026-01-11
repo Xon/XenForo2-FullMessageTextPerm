@@ -2,9 +2,13 @@
 
 namespace SV\FullMessageTextPermission\XF\Entity;
 
+use SV\FullMessageTextPermission\XF\Entity\UserOption as ExtendedUserOption;
 use SV\Threadmarks\Entity\Threadmark as ThreadmarkEntity;
 use XF\Mvc\Entity\Entity;
 
+/**
+ * @property-read ?ExtendedUserOption $Option
+ */
 class User extends XFCP_User
 {
     /** @var bool */
@@ -60,16 +64,16 @@ class User extends XFCP_User
     {
         if (!$this->canReceiveFullEmailMessageContent || $context === null)
         {
-            return (int)(\XF::options()->sv_fmp_text_trim_length ?? 0);
+            return \XF::options()->sv_fmp_text_trim_length ?? 0;
         }
 
         /** @var ThreadmarkEntity|null $threadmark */
         $threadmark = $context->isValidRelation('Threadmark') ? $context->getRelation('Threadmark') : null;
         if ($threadmark !== null && $threadmark->isVisible() && $threadmark->canView())
         {
-            return (int)(\XF::options()->sv_fmp_threadmark_text_trim_length ?? 0);
+            return \XF::options()->sv_fmp_threadmark_text_trim_length ?? 0;
         }
 
-        return (int)(\XF::options()->sv_fmp_full_text_trim_length ?? 0);
+        return \XF::options()->sv_fmp_full_text_trim_length ?? 0;
     }
 }

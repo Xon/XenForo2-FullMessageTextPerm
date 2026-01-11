@@ -4,8 +4,12 @@ namespace SV\FullMessageTextPermission\XF\Service\Conversation;
 
 use SV\FullMessageTextPermission\Globals;
 
+/**
+ * @extends \XF\Service\Conversation\Creator
+ */
 class Creator extends XFCP_Creator
 {
+    /** @var bool|null */
     protected $forceConversationNotification = null;
 
     public function forceConversationNotification($forceConversationNotification = null)

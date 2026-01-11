@@ -7,10 +7,13 @@ namespace SV\FullMessageTextPermission\XF\Service\Conversation;
 
 use SV\FullMessageTextPermission\Globals;
 use XF\App;
-use XF\Entity\ConversationMaster;
-use XF\Entity\ConversationMessage;
-use XF\Entity\User;
+use XF\Entity\ConversationMaster as ConversationMasterEntity;
+use XF\Entity\ConversationMessage as ConversationMessageEntity;
+use XF\Entity\User as UserEntity;
 
+/**
+ * @extends \XF\Service\Conversation\Notifier
+ */
 class Notifier extends XFCP_Notifier
 {
     /** @var bool */
@@ -18,13 +21,13 @@ class Notifier extends XFCP_Notifier
     /** @var string|null */
     protected $actionTypeForWarning = null;
 
-    public function __construct(App $app, ConversationMaster $conversation)
+    public function __construct(App $app, ConversationMasterEntity $conversation)
     {
         $this->forceConversationNotification = Globals::$forceConversationNotification ?? false;
         parent::__construct($app, $conversation);
     }
 
-    protected function _sendNotifications($actionType, array $notifyUsers, ?ConversationMessage $message = null, ?User $sender = null)
+    protected function _sendNotifications($actionType, array $notifyUsers, ?ConversationMessageEntity $message = null, ?UserEntity $sender = null)
     {
         $this->actionTypeForWarning = 'conversation_' . $actionType;
 
@@ -32,7 +35,7 @@ class Notifier extends XFCP_Notifier
     }
 
 
-    protected function _canUserReceiveNotification(User $user, ?User $sender = null)
+    protected function _canUserReceiveNotification(UserEntity $user, ?UserEntity $sender = null)
     {
         if ($this->actionTypeForWarning)
         {

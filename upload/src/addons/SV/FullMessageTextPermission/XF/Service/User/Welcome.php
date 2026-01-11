@@ -4,6 +4,9 @@ namespace SV\FullMessageTextPermission\XF\Service\User;
 
 use SV\FullMessageTextPermission\Globals;
 
+/**
+ * @extends \XF\Service\User\Welcome
+ */
 class Welcome extends XFCP_Welcome
 {
     public function sendMessage()
