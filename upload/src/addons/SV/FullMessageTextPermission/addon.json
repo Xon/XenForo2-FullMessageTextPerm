@@ -3,12 +3,13 @@
     "title": "Email Full Message Text Permission",
     "description": "Adds permissions to include full message text in emails, per usergroup",
     "version_id": 1697658395,
-    "version_string": "2.4.1",
+    "version_string": "2.4.2",
     "dev": "Xon",
     "dev_url": "https://atelieraphelion.com/",
     "faq_url": "",
     "support_url": "https://xenforo.com/community/resources/full-message-text-permission.6291/",
     "extra_urls": {
+        "License": "https://atelieraphelion.com/products/full-message-text-permission.178/copyright",
         "Add-on site": "https://atelieraphelion.com/products/full-message-text-permission.178/"
     },
     "require": {
