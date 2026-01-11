@@ -15,7 +15,7 @@ class User extends XFCP_User
      * @param int|null $nodeId
      * @param bool     $forceConversationNotification
      */
-    public function configureFullEmailMessageContent(string $type, int $nodeId = null, bool $forceConversationNotification = false)
+    public function configureFullEmailMessageContent(string $type, ?int $nodeId = null, bool $forceConversationNotification = false)
     {
         switch ($type)
         {

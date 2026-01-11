@@ -24,7 +24,7 @@ class Notifier extends XFCP_Notifier
         parent::__construct($app, $conversation);
     }
 
-    protected function _sendNotifications($actionType, array $notifyUsers, ConversationMessage $message = null, User $sender = null)
+    protected function _sendNotifications($actionType, array $notifyUsers, ?ConversationMessage $message = null, ?User $sender = null)
     {
         $this->actionTypeForWarning = 'conversation_' . $actionType;
 
@@ -32,7 +32,7 @@ class Notifier extends XFCP_Notifier
     }
 
 
-    protected function _canUserReceiveNotification(User $user, User $sender = null)
+    protected function _canUserReceiveNotification(User $user, ?User $sender = null)
     {
         if ($this->actionTypeForWarning)
         {
